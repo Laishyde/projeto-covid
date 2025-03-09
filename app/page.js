@@ -303,7 +303,7 @@ export default function Home() {
                 </div>
             )}
             <footer className={styles.cabecalho}>
-              <h2>Laís Cristina 2025</h2>
+              <h2>Laís Cristina @2025</h2>
             </footer>
         </div>
     );
