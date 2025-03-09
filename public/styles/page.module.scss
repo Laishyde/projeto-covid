@@ -1,0 +1,280 @@
+/* src/public/styles/page.module.scss */
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background-color: white;
+  color: #103475;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cabecalho{
+  width: 100%;
+  height: 100px;
+  background-color: #103475;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+
+}
+
+
+.header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+      text-decoration: underline;
+  }
+}
+/* public/styles/page.module.scss */
+
+/* ... (Existing styles) ... */
+
+/* Custom Alert Styles */
+.alertOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.alertBox {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.alertButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.banner {
+  background-image: url(./assets/24325.jpg);
+  width: 100%;
+  height: 400px;
+  background-position: center center; /* shorthand for center horizontally and vertically */
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  box-sizing: border-box;
+  /* Add these for extra insurance on smaller screens */
+  object-fit: cover; /* Ensures image covers the container */
+  object-position: center center; /* Centers the image within its box */
+}
+
+/* Optional: Media Query for even smaller screens if needed */
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+  .banner {
+    height: 300px; /* Reduce height on very small screens */
+    background-image: url(./assets/7643626_24680.jpg);
+  }
+}
+
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  color: #103475;
+  font-size: 1.5rem;
+}
+
+.formControl {
+  margin-bottom: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 8px 10px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  transition: all 0.3s ease;
+  border: 1px solid #103475;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cardContent {
+  padding: 15px;
+
+}
+
+.cardTitle {
+  color: #103475;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.countryTitle {
+  color: #103475;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Estilos para o card de país (onde os dados do país são exibidos) */
+.countryCard {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+  width: 400px;
+  height: auto;
+  display: block;
+  text-align: left;
+}
+
+/* Estilos para o container do gráfico */
+.chartCard {
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  align-self: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gridItem {
+  margin-bottom: 15px;
+}
+/* yourStyles.module.css */
+.visualizationImage {
+  width: 100%; /* Make the image responsive */
+  max-width: 800px; /*  Set a maximum width */
+  margin: 20px auto; /* Center the image horizontally */
+  display: block; /* Required for margin auto to work */
+}
+
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+.line {
+  width: 700px; /* Adjust as needed */
+  height: 50%; /* Adjust as needed */
+  margin: 0 auto; /* Center the chart */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .line {
+    width: 400px;
+    height: 50%;
+  }
+}
+
+.inputError {
+  border-color: #dc3545;
+}
+
+.errorText {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.submitButton {
+  background-color: #1F58C2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
